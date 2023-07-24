@@ -16,7 +16,7 @@ export class AppComponent {
 
   carregar() {
     this.requestService.getRepos()
-        .subscribe((response: any[]) => {
+        .subscribe((response: IRepos[]) => {
           this.repos = response.map(r => {
             return {
               full_name: r.full_name,
